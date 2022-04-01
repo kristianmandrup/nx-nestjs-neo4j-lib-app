@@ -5,19 +5,16 @@
     "defaultBase": "main"
   },
   "cli": {
-    "defaultCollection": "@nrwl/workspace"
+    "defaultCollection": "@nrwl/nest"
   },
   "tasksRunnerOptions": {
     "default": {
-      "runner": "@nrwl/workspace/tasks-runners/default",
+      "runner": "@nrwl/nx-cloud",
       "options": {
-        "cacheableOperations": [
-          "build",
-          "lint",
-          "test",
-          "e2e"
-        ]
+        "cacheableOperations": ["build", "lint", "test", "e2e"],
+        "accessToken": "OGI5ZTYwMjItZGZlZS00OGIzLThmNWYtOTI0NDM1M2Q5NTU2fHJlYWQtd3JpdGU="
       }
     }
-  }
+  },
+  "defaultProject": "my-nest-app"
 }
