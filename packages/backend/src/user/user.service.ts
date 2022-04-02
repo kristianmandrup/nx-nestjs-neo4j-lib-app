@@ -55,7 +55,6 @@ export class UserService implements UserServiceAbstract {
   }
 
   async findOneByField(key: string, value: string, currentUser?: CurrentUserPayload): Promise<AuthUser> {
-    const emil = await this.ogmService.getCustomer('EmilEifrem7474');
     if (!currentUser) {
       currentUser = c.adminCurrentUser;
     };

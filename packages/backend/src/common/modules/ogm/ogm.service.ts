@@ -20,18 +20,18 @@ export class OgmService {
   }
 
   // TODO: not used anymore except in a test
-  async getCustomer(username: string) {
-    const Customer = this.ogm.model('Customer');
-    const [existing] = await Customer.find({
-      where: {
-        username,
-      },
-    });
+  // async getCustomer(username: string) {
+  //   const Customer = this.ogm.model('Customer');
+  //   const [existing] = await Customer.find({
+  //     where: {
+  //       username,
+  //     },
+  //   });
 
-    if (!existing) {
-      throw new Error(`can't found customer with username ${username}!`);
-    };
+  //   if (!existing) {
+  //     throw new Error(`can't found customer with username ${username}!`);
+  //   };
 
-    return existing;
-  }
+  //   return existing;
+  // }
 }
