@@ -1,13 +1,14 @@
 import { Injectable } from '@nestjs/common';
-const { OGM } = require("@neo4j/graphql-ogm");
-import { typeDefs, neo4jDriver as driver } from '../../config';
+import { OGM } from "@neo4j/graphql-ogm";
+import { neo4jDriver as driver } from '../../config';
+import { typeDefs } from '../../schema';
 
 // const ogm = new OGM({ typeDefs, driver });
 // const User = ogm.model("User");
 
 @Injectable()
 export class OgmService {
-  private ogm: typeof OGM;
+  private ogm: OGM;
 
   constructor() {
     this.ogm = new OGM({ typeDefs, driver: driver() });
@@ -18,7 +19,7 @@ export class OgmService {
     return this.ogm.model(model);
   }
 
-  // TODO: not used anymore
+  // TODO: not used anymore except in a test
   async getCustomer(username: string) {
     const Customer = this.ogm.model('Customer');
     const [existing] = await Customer.find({

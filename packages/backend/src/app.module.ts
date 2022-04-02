@@ -6,7 +6,8 @@ import { GraphQLModule } from '@nestjs/graphql';
 import { JwtModule } from '@nestjs/jwt';
 import { AuthenticationError } from 'apollo-server-core';
 import { ConnectionParams } from 'subscriptions-transport-ws';
-import { configuration, neoSchema } from './common/config';
+import { configuration } from './common/config';
+import { neoSchema } from './common/schema'
 import { mapKeysToLowerCase } from './common/utils';
 import { constants as userConstants } from './user/user.constants';
 import { UserModule } from './user/user.module';

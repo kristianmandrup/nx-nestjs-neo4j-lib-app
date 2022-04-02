@@ -83,7 +83,7 @@ export class UserService implements UserServiceAbstract {
   }
 
   async updatePassword(data: UpdateUserPasswordInput, currentUser: CurrentUserPayload): Promise<User> {
-    let userToUpdate = await this.findOneByField('id', data.id, currentUser);
+    const userToUpdate = await this.findOneByField('id', data.id, currentUser);
     userToUpdate.password = hashPassword(data.password);
     return userToUpdate;
   }

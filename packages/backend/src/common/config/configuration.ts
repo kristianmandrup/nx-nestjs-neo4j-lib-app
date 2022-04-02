@@ -1,8 +1,4 @@
-import path = require("path");
 import { EnvironmentVariables } from "../interfaces/environment-variables.interface";
-
-const localDir = __dirname
-const distPath = (filePath) =>  path.join(localDir, filePath)
 
 export const configuration = (): EnvironmentVariables => ({
   // app
@@ -10,8 +6,8 @@ export const configuration = (): EnvironmentVariables => ({
   // server
   httpsServerPort: parseInt(process.env.HTTPS_HTTPS_SERVER_PORT, 10) || 3443,
   // 
-  httpsKeyFile: process.env.HTTPS_KEY_FILE || distPath('config/privkey.pem'),
-  httpsCertFile: process.env.HTTPS_CERT_FILE || distPath('config/fullchain.pem'),
+  httpsKeyFile: process.env.HTTPS_KEY_FILE || 'config/privkey.pem',
+  httpsCertFile: process.env.HTTPS_CERT_FILE || 'config/fullchain.pem',
   corsOriginEnabled: process.env.CORS_ORIGIN_ENABLED === 'true' ? true : false,
   corsOriginReactFrontend: process.env.CORS_ORIGIN_REACT_FRONTEND || 'https://localhost:3000',
   // neo4j

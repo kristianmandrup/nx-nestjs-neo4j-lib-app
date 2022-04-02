@@ -1,11 +1,9 @@
-import * as fs from 'fs';
+import { readFile } from './read-file';
 import { configuration } from './configuration';
-
-// console.log('current dir', process.cwd())
 
 export const httpsConfig = {
   // private-key.pem
-  key: fs.readFileSync(configuration().httpsKeyFile),
+  key: readFile(configuration().httpsKeyFile),
   // public-certificate.pem
-  cert: fs.readFileSync(configuration().httpsCertFile),
+  cert: readFile(configuration().httpsCertFile),
 };
