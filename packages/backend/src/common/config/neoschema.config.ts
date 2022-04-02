@@ -9,9 +9,14 @@ import { UserRoles } from '../enums';
 import { SignInInput, SignUpInput } from '../input-type';
 import { constants as c } from '../constants';
 
-const schemaGraphql = '../../schema.graphql';
-if (!fs.existsSync(path.join(__dirname, schemaGraphql))) {
-  throw new Error(`can't open schemaGraphql: ${schemaGraphql}`);
+const localDir = __dirname
+const distPath = (filePath) =>  path.join(localDir, filePath)
+
+const schemaGraphql = 'schema.graphql';
+const schemaFilePath = distPath(schemaGraphql)
+if (!fs.existsSync(schemaFilePath)) {
+  const errMsg = `can't open schema.graphql file in ${schemaFilePath}`
+  throw new Error(errMsg);
 };
 // load GraphQL type definitions from schema.graphql file
 export const typeDefs = fs
