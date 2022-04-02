@@ -1,4 +1,4 @@
-import { OgmService } from './../common/modules/ogm/ogm.service';
+import { OgmService } from '../../common/modules/ogm/ogm.service';
 import { Test, TestingModule } from '@nestjs/testing';
 import { UserService } from './user.service';
 

@@ -1,5 +1,5 @@
 import { Parent, ResolveField, Resolver } from '@nestjs/graphql';
-import { Cat, Owner } from '../graphql.schema';
+import { Cat, Owner } from '../../graphql.schema';
 import { OwnersService } from '../owners/owners.service';
 
 @Resolver('Cat')

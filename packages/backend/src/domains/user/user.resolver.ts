@@ -2,7 +2,7 @@ import { User, CurrentUser, CurrentUserPayload, GqlAuthGuard, GqlRolesGuard, Rol
 import { NotFoundException, UseGuards } from '@nestjs/common';
 import { Args, Mutation, Query, Resolver, Subscription } from '@nestjs/graphql';
 import { PubSub } from 'graphql-subscriptions';
-import { PaginationArgs } from '../common/arg-types';
+import { PaginationArgs } from '../../common/arg-types';
 import { SubscriptionEvent } from './enums';
 import { DeleteUserInput, NewUserInput, UpdateUserInput, UpdateUserPasswordInput, UpdateUserProfileInput } from './input-type';
 import { constants as c } from './user.constants';

@@ -1,5 +1,5 @@
 import { Min } from 'class-validator';
-import { CreateCatInput } from '../../graphql.schema';
+import { CreateCatInput } from '../../../graphql.schema';
 
 export class CreateCatDto extends CreateCatInput {
   @Min(1)

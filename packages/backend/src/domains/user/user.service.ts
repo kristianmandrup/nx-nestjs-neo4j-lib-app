@@ -1,8 +1,8 @@
 import { AuthUser, CurrentUserPayload, User, UserRoles, UserServiceAbstract } from "@koakh/nestjs-package-jwt-authentication-graphql";
 import { HttpException, HttpStatus, Injectable, NotFoundException } from '@nestjs/common';
-import { OgmService } from "../common/modules/ogm/ogm.service";
-import { PaginationArgs } from '../common/arg-types';
-import { newUuid } from '../common/utils/main.util';
+import { OgmService } from "../../common/modules/ogm/ogm.service";
+import { PaginationArgs } from '../../common/arg-types';
+import { newUuid } from '../../common/utils/main.util';
 import { DeleteUserInput, NewUserInput, UpdateUserInput, UpdateUserPasswordInput, UpdateUserProfileInput } from './input-type';
 import { UserData } from './interfaces';
 import { constants as c } from "./user.constants";

@@ -1,5 +1,5 @@
 import { Logger } from '@nestjs/common';
-import { configuration } from '../common/config';
+import { configuration } from '../../common/config';
 interface User {
   username: string;
   tokenVersion: number;

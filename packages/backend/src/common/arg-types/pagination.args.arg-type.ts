@@ -3,11 +3,11 @@ import { ArgsType, Field, Int } from '@nestjs/graphql';
 
 @ArgsType()
 export class PaginationArgs {
-  @Field(type => Int)
+  @Field(_type => Int)
   @Min(0)
-  skip: number = 0;
-
-  @Field(type => Int)
+  skip;
+  
+  @Field(_type => Int)
   @Min(1)
   @Max(50)
   take: number = 25;
